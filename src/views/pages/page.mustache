@@ -1,7 +1,9 @@
 {{>partials/header}}
 
+{{#banner}}
 <section class="banner" style="background-image: url('images/{{banner}}')">Todos os {{page}}</section>
 <h2>Todos os {{page}} disponíveis para adoção</h2>
+{{/banner}}
 
     <div class="container list">
     {{#list}}
@@ -13,6 +15,11 @@
         </div>   
     {{/list}}
     </div>
+    {{^list}}
+    <div class="container no-list">
+        <h2>Nao há animais nestas condicoes.</h2>
+    </div>
+    {{/list}}
 
 
 
